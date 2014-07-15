@@ -1,10 +1,10 @@
 library(shiny)
-library(caret)
+source("randomforest.R")
 
 # This function predicts the type of IRIS based on the Machine Learning
 # Algorithm Random Forest that was trained on the IRIS dataset
 flower <- function(Sepal.Length,Sepal.Width,Petal.Length,Petal.Width) 
-  predict(modfit, cbind(Sepal.Length,Sepal.Width,Petal.Length,Petal.Width))
+  as.character(predict(modfit, cbind(Sepal.Length,Sepal.Width,Petal.Length,Petal.Width)))
 
 shinyServer(
   function(input, output) {

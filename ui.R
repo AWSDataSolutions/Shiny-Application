@@ -4,11 +4,15 @@ library(shiny)
 shinyUI(
   pageWithSidebar(
     # Application title
-    headerPanel("IRIS Flower Power Classification Application"),
+    headerPanel("IRIS Flower Classification Prediction Application"),
   
     # The user is able to manipulate the 4 Input parameters and then presses
     # the Submit button to find out the type of predicted IRIS flower. 
     sidebarPanel(
+      h4('User Instruction'),
+      h5('This application enables you to set 4 Input Parameters that determine the characteristic of your IRIS flower. Once this is done you can press the Submit button and we will then let you know based on our trained Random Forest Machine Learning Algorithm which type of IRIS it is.'),
+      h5('In order to get you started we have entered a sample IRIS flower and its corresponding predicted classification.'),
+      h5(' '),
       numericInput('ISepalLength', 'Sepal Length  Min Value:4.3   Max Value:7.9', 4.3, min = 4.3, max = 7.9, step = 0.1),
       numericInput('ISepalWidth', 'Sepal Width  Min Value:2   Max Value:4.4', 2, min = 2, max = 4.4, step = 0.1),
       numericInput('IPetalLength', 'Petal Length  Min Value:1   Max Value:6.9', 1, min = 1, max = 6.9, step = 0.1),
