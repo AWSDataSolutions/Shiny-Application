@@ -6,6 +6,8 @@ shinyUI(
     # Application title
     headerPanel("IRIS Flower Power Classification Application"),
   
+    # The user is able to manipulate the 4 Input parameters and then presses
+    # the Submit button to find out the type of predicted IRIS flower. 
     sidebarPanel(
       numericInput('ISepalLength', 'Sepal Length  Min Value:4.3   Max Value:7.9', 4.3, min = 4.3, max = 7.9, step = 0.1),
       numericInput('ISepalWidth', 'Sepal Width  Min Value:2   Max Value:4.4', 2, min = 2, max = 4.4, step = 0.1),
