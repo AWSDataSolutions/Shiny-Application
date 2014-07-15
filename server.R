@@ -2,7 +2,7 @@ library(shiny)
 library(caret)
 
 # This function predicts the type of IRIS based on the Machine Learning
-# Algorithm that was trained on the IRIS dataset
+# Algorithm Random Forest that was trained on the IRIS dataset
 flower <- function(Sepal.Length,Sepal.Width,Petal.Length,Petal.Width) 
   predict(modfit, cbind(Sepal.Length,Sepal.Width,Petal.Length,Petal.Width))
 
